@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academics - Amity University</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        .logo img {
+            max-width: 150px;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+        main {
+            padding: 20px;
+        }
+        section {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        section h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .accordion {
+            margin-bottom: 20px;
+        }
+        .accordion-item {
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .accordion-button {
+            width: 100%;
+            background-color: #333;
+            color: #fff;
+            padding: 15px;
+            text-align: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+        .accordion-button.active, .accordion-button:hover {
+            background-color: #555;
+        }
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+            padding: 0 15px;
+        }
+        .accordion-content p {
+            margin: 15px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="Amity University Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="academics.html">Academics</a></li>
+                <li><a href="admissions.html">Admissions</a></li>
+                <li><a href="campus.html">Campus Life</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h1>Academic Programs</h1>
+            <div class="accordion">
+                <div class="accordion-item">
+                    <button class="accordion-button">Department of Computer Science</button>
+                    <div class="accordion-content">
+                        <p>Offering BSc, MSc, and PhD programs in Computer Science.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-button">Department of Business Administration</button>
+                    <div class="accordion-content">
+                        <p>Offering BBA, MBA, and PhD programs in Business Administration.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-button">Department of Mechanical Engineering</button>
+                    <div class="accordion-content">
+                        <p>Offering BTech, MTech, and PhD programs in Mechanical Engineering.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-button">Department of Electrical Engineering</button>
+                    <div class="accordion-content">
+                        <p>Offering BTech, MTech, and PhD programs in Electrical Engineering.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-button">Department of Civil Engineering</button>
+                    <div class="accordion-content">
+                        <p>Offering BTech, MTech, and PhD programs in Civil Engineering.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-button">Department of Biotechnology</button>
+                    <div class="accordion-content">
+                        <p>Offering BSc, MSc, and PhD programs in Biotechnology.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-button">Department of Mathematics</button>
+                    <div class="accordion-content">
+                        <p>Offering BSc, MSc, and PhD programs in Mathematics.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-button">Department of Physics</button>
+                    <div class="accordion-content">
+                        <p>Offering BSc, MSc, and PhD programs in Physics.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-button">Department of Chemistry</button>
+                    <div class="accordion-content">
+                        <p>Offering BSc, MSc, and PhD programs in Chemistry.</p>
+                    </div>
+                </div>
+                <!-- Add more departments as needed -->
+            </div>
+        </section>
+    </main>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const accordionButtons = document.querySelectorAll(".accordion-button");
+            accordionButtons.forEach(button => {
+                button.addEventListener("click", function() {
+                    this.classList.toggle("active");
+                    const content = this.nextElementSibling;
+                    if (content.style.maxHeight) {
+                        content.style.maxHeight = null;
+                    } else {
+                        content.style.maxHeight = content.scrollHeight + "px";
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
