@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Amity University</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        .logo img {
+            max-width: 150px;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+        main {
+            padding: 20px;
+        }
+        section {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        section h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        section p {
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+        form label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        form input[type="text"],
+        form input[type="email"],
+        form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        form input[type="submit"] {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        form input[type="submit"]:hover {
+            background-color: #555;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: #fff;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="Amity University Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="academics.html">Academics</a></li>
+                <li><a href="admissions.html">Admissions</a></li>
+                <li><a href="campus.html">Campus Life</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h1>Contact Us</h1>
+            <p>We would love to hear from you! Please fill out the form below to get in touch with us.</p>
+            <form action="submit_contact_form" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required><br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br>
+                <label for="subject">Subject:</label>
+                <input type="text" id="subject" name="subject" required><br>
+                <label for="message">Message:</label><br>
+                <textarea id="message" name="message" rows="4" required></textarea><br>
+                <input type="submit" value="Submit">
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Amity University. All rights reserved.</p>
+    </footer>
+</body>
+</html>
